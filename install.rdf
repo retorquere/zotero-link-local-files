@@ -5,11 +5,11 @@
 	<Description about="urn:mozilla:install-manifest">
 		<em:id>linklocalfileszotero@iris-advies.com</em:id>
 		<em:name>Link local files Plugin for Zotero</em:name>
-		<em:version>0.0.2.git</em:version>
+		<em:version>0.0.3</em:version>
 		<em:description>When enabled, Zotero will automatically link to files dropped on Zotero instead of importing them,
     if the file is in the baseDir</em:description>
 		<em:creator>Emiliano Heyns</em:creator>
-		<em:updateURL>https://www.zotero.org/download/plugins.rdf</em:updateURL>
+		<!-- em:updateURL>https://www.zotero.org/download/plugins.rdf</em:updateURL -->
 		<em:type>2</em:type> <!-- type=extension -->
 		
 		<!-- Requires Zotero -->
