@@ -18,8 +18,8 @@
 				<em:id>zotero@chnm.gmu.edu</em:id>
 				<em:name>Zotero</em:name>
 				<em:homepageURL>http://www.zotero.org</em:homepageURL>
-				<em:minVersion>2.1</em:minVersion>
-				<em:maxVersion>3.0.*</em:maxVersion>
+				<em:minVersion>3.0</em:minVersion>
+				<em:maxVersion>4.0.*</em:maxVersion>
 			</Description>
 		</em:requires>
     
@@ -27,15 +27,15 @@
 		<em:targetApplication>
 			<Description>
 				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-				<em:minVersion>3.6</em:minVersion>
-				<em:maxVersion>7.*</em:maxVersion>
+				<em:minVersion>17.0</em:minVersion>
+				<em:maxVersion>23.*</em:maxVersion>
 			</Description>
 		</em:targetApplication>
 		<em:targetApplication>
 			<Description>
 				<em:id>zotero@chnm.gmu.edu</em:id>
-				<em:minVersion>3.0b1</em:minVersion>
-				<em:maxVersion>3.0.*</em:maxVersion>
+				<em:minVersion>3.0</em:minVersion>
+				<em:maxVersion>4.0.*</em:maxVersion>
 			</Description>
 		</em:targetApplication>
 	</Description>
