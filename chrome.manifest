@@ -1,0 +1,5 @@
+content	linklocalfileszotero				chrome/content/linklocalfileszotero/
+locale	linklocalfileszotero	en-US		chrome/locale/en-US/linklocalfileszotero/
+skin	linklocalfileszotero	default		chrome/skin/default/linklocalfileszotero/
+
+overlay	chrome://zotero/content/zoteroPane.xul	chrome://linklocalfileszotero/content/overlay.xul
