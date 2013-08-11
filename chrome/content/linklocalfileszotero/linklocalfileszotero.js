@@ -5,7 +5,7 @@ Zotero.LinkLocalFiles = {
     {
       return function (file, sourceItemID, libraryID)
       {
-        if (Zotero.Attachments.getBaseDirectoryRelativePath(file.persistentDescriptor).indexOf('attachments:') == 0) {
+        if (libraryID == null && Zotero.Attachments.getBaseDirectoryRelativePath(file.persistentDescriptor).indexOf('attachments:') == 0) {
           return Zotero.Attachments.linkFromFile(file, sourceItemID);
         } else {
           return original.apply(this, arguments);
