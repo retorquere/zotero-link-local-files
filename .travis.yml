@@ -10,7 +10,7 @@ rvm:
 script:
 - true
 after_success:
-- ./.travis.sh
+- bundle exec ./.travis.sh
 before_install:
 - npm update
 branches:
