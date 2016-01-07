@@ -1,5 +1,5 @@
-zotero-link-local-files
-=======================
+
+# Link local files
 
 When installed, this extension will silently link instead of import files as they are dropped om zotero (or otherwise
 offered for import) when the are in the base directory (which needs to be set in the Zotero "advanced" preferences).
@@ -17,3 +17,5 @@ preferred way of working.
   one research project.
 * If you sync your library with others, they won't get the attachments
 * If you sync your library with other PCs of your own, you will only get the attachments on the originating PC.
+
+If you experience any problems, or are unclear on how to use it, I'll be glad to [help](https://zotplus.github.io/support.html).
