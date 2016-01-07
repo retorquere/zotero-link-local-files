@@ -38,5 +38,5 @@ else
     exit
   fi
 
-  ./bin/xpi-to-s3
+  # ./bin/xpi-to-s3
 fi
