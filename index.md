@@ -2,8 +2,6 @@
 title: Link local files
 ---
 
-# Link local files
-
 When installed, this extension will silently link instead of import files as they are dropped om zotero (or otherwise
 offered for import) when the are in the base directory (which needs to be set in the Zotero "advanced" preferences).
 This behavior is Zotero-wide, and has no configuration; if you no longer want this behavior, remove or disable the
