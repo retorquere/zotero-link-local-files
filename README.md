@@ -17,4 +17,6 @@ preferred way of working.
 * If you sync your library with others, they won't get the attachments
 * If you sync your library with other PCs of your own, you will only get the attachments on the originating PC.
 
+You can find the latest release [here](https://github.com/ZotPlus/zotero-link-local-files/releases/latest)
+
 If you experience any problems, or are unclear on how to use it, I'll be glad to [help](https://github.com/ZotPlus/zotero-link-local-files/issues).

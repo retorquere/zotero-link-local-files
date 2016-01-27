@@ -91,7 +91,7 @@ GEM
     websocket (1.2.2)
     zip-zip (0.3)
       rubyzip (>= 1.0.0)
-    zotplus-rakehelper (0.0.147)
+    zotplus-rakehelper (0.0.148)
       front_matter_parser
       github_api
       nokogiri
@@ -107,6 +107,7 @@ PLATFORMS
 DEPENDENCIES
   addressable
   cucumber
+  front_matter_parser
   headless
   nokogiri
   rake
