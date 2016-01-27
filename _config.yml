@@ -1,0 +1,40 @@
+# Dependencies
+markdown:         kramdown
+redcarpet:
+  # enable auto ids for redcarpet
+  extensions:    ["with_toc_data"]
+kramdown:
+  # Disable auto-generated ID's for headings
+  auto_ids: true
+
+highlighter:      pygments
+
+# Permalinks
+permalink: /:categories/:title
+
+# Setup
+title:            "Link Local Files"
+#tagline:          'Making Zotero all it can be for us LaTeX holdouts'
+#description:          'Making Zotero all it can be for us LaTeX holdouts'
+baseurl:          https://zotplus.github.io/zotero-link-local-files
+#baseurl:          /Users/emile/zotero/link-local-files/site
+
+author:
+  name:           'Mark Otto'
+  url:            https://twitter.com/mdo
+
+paginate:         5
+
+github:
+  repo:           https://github.com/ZotPlus/zotero-link-local-files/
+  release:        https://github.com/ZotPlus/zotero-link-local-files/releases/latest
+travis:
+  build: https://travis-ci.org/ZotPlus/zotero-link-local-files
+  status: https://travis-ci.org/ZotPlus/zotero-link-local-files.svg?branch=master
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "page"
