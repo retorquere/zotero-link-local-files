@@ -4,7 +4,7 @@
 	<Description about="urn:mozilla:install-manifest">
 		<em:id>link-local-files@iris-advies.com</em:id>
 		<em:name>Link local files Plugin for Zotero</em:name>
-		<em:version>0.0.12</em:version>
+		<em:version>0.0.14</em:version>
 		<em:description>When enabled, Zotero will automatically link to files dropped on Zotero instead of importing them, if the file is in the baseDir</em:description>
 		<em:creator>Emiliano Heyns</em:creator>
 		<em:updateURL>https://zotplus.github.io/link-local-files/update.rdf</em:updateURL>
