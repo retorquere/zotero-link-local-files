@@ -1,6 +1,6 @@
 {
   "name": "zotero-link-local-files",
-  "version": "0.6.61",
+  "version": "5.0.0",
   "private": true,
   "description": "Zotero link local files",
   "preferglobal": true,
