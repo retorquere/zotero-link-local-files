@@ -9,6 +9,7 @@
     "prebuild": "npm run lint",
     "build": "webpack",
     "postbuild": "zotero-plugin-zipup build zotero-link-local-files",
+    "release": "zotero-plugin-release",
     "postversion": "git push --follow-tags"
   },
   "repository": {
