@@ -1,23 +1,9 @@
 <?xml version="1.0"?>
-<?xml-stylesheet href="chrome://linklocalfileszotero/skin/overlay.css" type="text/css"?>
-<!DOCTYPE window SYSTEM "chrome://linklocalfileszotero/locale/linklocalfileszotero.dtd">
+<?xml-stylesheet href="chrome://zotero-link-local-files/skin/overlay.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://zotero-link-local-files/locale/zotero-link-local-files.dtd">
 
-<overlay id="linklocalfileszotero-overlay"
-	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-	
-	<stringbundleset id="stringbundleset">
-		<stringbundle id="linklocalfileszotero-strings"
-			src="chrome://linklocalfileszotero/locale/linklocalfileszotero.properties"/>
-	</stringbundleset>
-	
-	<!-- menupopup id="zotero-tb-actions-popup">
-		<!- Make sure the menu separator for utilities is visible ->
-		<menuseparator id="zotero-tb-actions-plugins-separator" hidden="false"/>
-		<menuitem insertbefore="zotero-tb-actions-separator" label="&linklocalfileszotero.name;"
-			oncommand="Zotero.Link local files.insertLinkLocalFiles()"/>
-	</menupopup -->
-	
-	<!-- Include the main extension logic -->
-	<script src="chrome://zotero/content/include.js"/>
-	<script src="chrome://linklocalfileszotero/content/include.js" type="application/javascript;version=1.8"/>
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <!-- Include the main extension logic -->
+  <script src="chrome://zotero/content/include.js"/>
+  <script src="chrome://zotero-link-local-files/content/LinkLocalFiles.js"/>
 </overlay>

@@ -1,18 +1,35 @@
-Zotero.LinkLocalFiles = init: ->
-  # monkey-patch Zotero.Attachments
-  Zotero.Attachments.importFromFile = ((original) ->
-    return (file, sourceItemID, libraryID) ->
-      Zotero.debug("LLF: libraryID=#{libraryID}, file=#{file.path}, relpath=#{Zotero.Attachments.getBaseDirectoryRelativePath(file.path)}")
-      if !libraryID && Zotero.Attachments.getBaseDirectoryRelativePath(file.path).indexOf(Zotero.Attachments.BASE_PATH_PLACEHOLDER) == 0
-        return Zotero.Attachments.linkFromFile(file, sourceItemID)
-      else
-        return original.apply(@, arguments)
-  )(Zotero.Attachments.importFromFile)
+declare const Zotero: any
 
-  return
+const marker = 'LinkLocalFilesMonkeyPatched'
 
-# Initialize the utility
-window.addEventListener('load', ((e) ->
-  Zotero.LinkLocalFiles.init()
-  return
-), false)
+function patch(object, method, patcher) {
+  if (object[method][marker]) return
+  object[method] = patcher(object[method])
+  object[method][marker] = true
+}
+
+export = new class LinkLocalFiles {
+  constructor() {
+    window.addEventListener('load', e => { this.load() }, false)
+  }
+
+  public async load() {
+    // monkey-patch Zotero.Attachments
+
+    patch(Zotero.Attachments, 'importFromFile', original => Zotero.Promise.coroutine(function* importFromFile(options) {
+      const file = Zotero.File.pathToFile(options.file)
+      const libraryID = options.libraryID
+      const parentItemID = options.parentItemID
+
+      const relpath = Zotero.Attachments.getBaseDirectoryRelativePath(file.path)
+
+      Zotero.debug(`LLF: libraryID=${libraryID}, file=${file.path}, relpath=${relpath}`)
+
+      if (libraryID === Zotero.Libraries.userLibraryID && relpath.startsWith(Zotero.Attachments.BASE_PATH_PLACEHOLDER)) {
+        return yield Zotero.Attachments.linkFromFile(options)
+      } else {
+        return yield original.apply(this, arguments)
+      }
+    }))
+  }
+}

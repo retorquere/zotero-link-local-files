@@ -2,22 +2,37 @@
   "name": "zotero-better-bibtex",
   "version": "0.6.61",
   "private": true,
-  "description": "Better BibTeX support for Zotero",
+  "description": "Zotero link local files",
   "preferglobal": true,
   "scripts": {
-    "test": "exit 0"
+    "lint": "tslint -t stylish --project .",
+    "prebuild": "npm run lint",
+    "build": "webpack",
+    "postbuild": "zotero-plugin-zipup build zotero-link-local-files",
+    "postversion": "git push --follow-tags"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ZotPlus/zotero-better-bibtex.git"
+    "url": "https://github.com/retorquere/zotero-better-bibtex.git"
   },
-  "author": "",
+  "author": {
+    "name": "Emiliano Heyns",
+    "email": "Emiliano.Heyns@iris-advies.com"
+  },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ZotPlus/zotero-better-bibtex/issues"
+    "url": "https://github.com/retorquere/zotero-better-bibtex/issues"
   },
   "dependencies": {
-    "coffee-script": "^1.10.0",
-    "coffeelint": "^1.14.2"
+    "circular-dependency-plugin": "^5.0.2",
+    "zotero-plugin": "^0.0.44"
+  },
+  "xpi": {
+    "name": "Zotero Link Local Files",
+    "updateLink": "https://github.com/retorquere/zotero-link-local-files/releases/download/v{version}/zotero-link-local-files-{version}.xpi",
+    "releaseURL": "https://github.com/retorquere/zotero-link-local-files/releases/download/release/"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.1.0"
   }
 }
