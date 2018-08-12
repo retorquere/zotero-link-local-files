@@ -1,5 +1,5 @@
 {
-  "name": "zotero-better-bibtex",
+  "name": "zotero-link-local-files",
   "version": "0.6.61",
   "private": true,
   "description": "Zotero link local files",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/retorquere/zotero-better-bibtex.git"
+    "url": "https://github.com/retorquere/zotero-link-local-files.git"
   },
   "author": {
     "name": "Emiliano Heyns",
@@ -22,7 +22,7 @@
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/retorquere/zotero-better-bibtex/issues"
+    "url": "https://github.com/retorquere/zotero-link-local-files/issues"
   },
   "dependencies": {
     "circular-dependency-plugin": "^5.0.2",
