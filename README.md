@@ -1,6 +1,6 @@
 # Link local files [![Build Status](https://travis-ci.org/ZotPlus/zotero-link-local-files.svg?branch=master)](https://travis-ci.org/ZotPlus/zotero-link-local-files)
 
-When installed, and the Zotero base directory is configured (`Edit - `Preferences` - `Advanced` - `Files and Folders` -  `Linked Attachments Base Directory`),
+When installed, and the Zotero base directory is configured (`Edit` - `Preferences` - `Advanced` - `Files and Folders` -  `Linked Attachments Base Directory`),
 this extension will silently link instead of import files as they are dropped on zotero (or otherwise
 offered for import) when the dropped file lives in the base directory. This behavior is Zotero-wide, and has no configuration; if you no longer want this behavior, remove or disable the
 extension and restart Firefox/Zotero.
