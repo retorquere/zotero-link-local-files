@@ -1,4 +1,4 @@
-# Link local files [![Build Status](https://travis-ci.org/ZotPlus/zotero-link-local-files.svg?branch=master)](https://travis-ci.org/ZotPlus/zotero-link-local-files)
+# Link local files
 
 When installed, and the Zotero base directory is configured (`Edit` - `Preferences` - `Advanced` - `Files and Folders` -  `Linked Attachments Base Directory`),
 this extension will silently link instead of import files as they are dropped on zotero (or otherwise
