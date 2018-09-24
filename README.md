@@ -3,7 +3,7 @@
 When installed, and the Zotero base directory is configured (`Edit` - `Preferences` - `Advanced` - `Files and Folders` -  `Linked Attachments Base Directory`),
 this extension will silently link instead of import files as they are dropped on zotero (or otherwise
 offered for import) when the dropped file lives in the base directory. This behavior is Zotero-wide, and has no configuration; if you no longer want this behavior, remove or disable the
-extension and restart Firefox/Zotero.
+extension and restart Zotero.
 
 I created this plugin because I want my PDFs organized along with my own papers, and I do extensive markup on my tablet,
 which is gdrive-synced to my PCs; until Zotero offers a proper two-way tablet sync with conflict handling, this is my
