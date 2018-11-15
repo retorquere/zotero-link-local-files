@@ -25,7 +25,7 @@ export = new class LinkLocalFiles {
 
       Zotero.debug(`LLF: libraryID=${libraryID}, file=${file.path}, relpath=${relpath}`)
 
-      if (libraryID === Zotero.Libraries.userLibraryID && relpath.startsWith(Zotero.Attachments.BASE_PATH_PLACEHOLDER)) {
+      if ((typeof libraryID === 'undefined' || libraryID === Zotero.Libraries.userLibraryID) && relpath.startsWith(Zotero.Attachments.BASE_PATH_PLACEHOLDER)) {
         return yield Zotero.Attachments.linkFromFile(options)
       } else {
         return yield original.apply(this, arguments)
