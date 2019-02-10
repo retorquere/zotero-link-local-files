@@ -20,3 +20,10 @@ preferred way of working.
 You can find the latest release [here](https://github.com/ZotPlus/zotero-link-local-files/releases/latest)
 
 If you experience any problems, or are unclear on how to use it, I'll be glad to [help](https://github.com/ZotPlus/zotero-link-local-files/issues).
+
+## Hidden preferences
+
+You can change the default behavior of the plugin by setting [hidden preferences](https://www.zotero.org/support/preferences/hidden_preferences):
+
+* `link-local-files.groups` (default: `false`): when `false`, LLF will only intercept attachments in the user library, not any synced groups
+* `link-local-files.base` (default: `true`): when `true`, LLF will only intercept attachments base directory (see above). When `false`, LLF intercepts attachments wherever they live.
