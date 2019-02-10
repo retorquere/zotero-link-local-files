@@ -21,7 +21,7 @@ export = new class LinkLocalFiles {
       const file = Zotero.File.pathToFile(options.file)
       const relpath = Zotero.Attachments.getBaseDirectoryRelativePath(file.path)
 
-      const link = 
+      const link =
         (Zotero.Prefs.get('link-local-files.groups') || typeof libraryID === 'undefined' || libraryID === Zotero.Libraries.userLibraryID)
         &&
         (!Zotero.Prefs.get('link-local-files.base') || relpath.startsWith(Zotero.Attachments.BASE_PATH_PLACEHOLDER))
