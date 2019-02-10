@@ -17,15 +17,18 @@ export = new class LinkLocalFiles {
     // monkey-patch Zotero.Attachments
 
     patch(Zotero.Attachments, 'importFromFile', original => Zotero.Promise.coroutine(function* importFromFile(options) {
-      const file = Zotero.File.pathToFile(options.file)
       const libraryID = options.libraryID
-      const parentItemID = options.parentItemID
-
+      const file = Zotero.File.pathToFile(options.file)
       const relpath = Zotero.Attachments.getBaseDirectoryRelativePath(file.path)
 
-      Zotero.debug(`LLF: libraryID=${libraryID}, file=${file.path}, relpath=${relpath}`)
+      const link = 
+        (Zotero.Prefs.get('link-local-files.groups') || typeof libraryID === 'undefined' || libraryID === Zotero.Libraries.userLibraryID)
+        &&
+        (!Zotero.Prefs.get('link-local-files.base') || relpath.startsWith(Zotero.Attachments.BASE_PATH_PLACEHOLDER))
 
-      if ((typeof libraryID === 'undefined' || libraryID === Zotero.Libraries.userLibraryID) && relpath.startsWith(Zotero.Attachments.BASE_PATH_PLACEHOLDER)) {
+      Zotero.debug(`LLF: libraryID=${libraryID}, file=${file.path}, relpath=${relpath}, link=${link}`)
+
+      if (link) {
         return yield Zotero.Attachments.linkFromFile(options)
       } else {
         return yield original.apply(this, arguments)
