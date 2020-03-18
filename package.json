@@ -25,7 +25,7 @@
     "url": "https://github.com/retorquere/zotero-link-local-files/issues"
   },
   "dependencies": {
-    "circular-dependency-plugin": "^5.0.2",
+    "circular-dependency-plugin": "^5.2.0",
     "zotero-plugin": "^0.0.72"
   },
   "xpi": {
