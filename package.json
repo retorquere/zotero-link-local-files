@@ -10,7 +10,9 @@
     "build": "webpack",
     "postbuild": "zotero-plugin-zipup build zotero-link-local-files",
     "release": "zotero-plugin-release",
-    "postversion": "git push --follow-tags"
+    "postversion": "git push --follow-tags",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -26,7 +28,8 @@
   },
   "dependencies": {
     "circular-dependency-plugin": "^5.0.2",
-    "zotero-plugin": "^0.0.72"
+    "zotero-plugin": "^0.0.72",
+    "snyk": "^1.316.1"
   },
   "xpi": {
     "name": "Zotero Link Local Files",
@@ -35,5 +38,6 @@
   },
   "devDependencies": {
     "webpack-cli": "^3.2.3"
-  }
+  },
+  "snyk": true
 }
