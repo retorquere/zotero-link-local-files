@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "circular-dependency-plugin": "^5.0.2",
-    "zotero-plugin": "^0.0.72"
+    "zotero-plugin": "^0.0.96"
   },
   "xpi": {
     "name": "Zotero Link Local Files",
